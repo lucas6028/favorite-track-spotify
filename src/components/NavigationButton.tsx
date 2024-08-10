@@ -1,6 +1,16 @@
 import { useNavigate } from "react-router-dom";
 
-const NavigationButton = ({ to, children, className }) => {
+interface NavigationButtonProps {
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+const NavigationButton: React.FC<NavigationButtonProps> = ({
+  to,
+  children,
+  className,
+}) => {
   const navigate = useNavigate();
 
   return (
