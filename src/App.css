@@ -58,7 +58,10 @@
   align-items: center;
   box-shadow: inset 0 0 1.6em -0.6em #714da6;
   overflow: hidden;
-  position: relative;
+  position: fixed; /* Change from relative to fixed */
+  left: 50%; /* Center horizontally */
+  bottom: 100px; /* Position near the bottom of the screen */
+  transform: translateX(-50%); /* Adjust horizontal centering */
   height: 2.8em;
   padding-right: 3.3em;
   cursor: pointer;
