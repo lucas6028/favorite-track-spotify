@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 
 function FavoriteTrack() {
   const [trackId, setTrackId] = useState("29JrmE89KgRyCxBIzq2Ocw");
-  const clientId = "85aa4d0b59e64a94a727088a17f91fa3";
+  const clientId = import.meta.env.VITE_CLIENT_ID as string;
+  // const clientId = "85aa4d0b59e64a94a727088a17f91fa3";
   const params = new URLSearchParams(window.location.search);
   const code = params.get("code");
 

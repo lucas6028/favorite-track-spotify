@@ -1,13 +1,14 @@
 export async function getAccessToken(clientId: string, code: string) {
   const verifier = localStorage.getItem("verifier");
+  const redirectURI =
+    (import.meta.env.VITE_REDIRECT_URI as string) ||
+    "http://localhost:5173/callback";
 
   const params = new URLSearchParams();
   params.append("client_id", clientId);
   params.append("grant_type", "authorization_code");
   params.append("code", code);
-  params.append("redirect_uri", "https://spotify-api-pi.vercel.app/favTrack");
-  // params.append("redirect_uri", "http://localhost:5173/favTrack");
-  // params.append("redirect_uri", "http://localhost:5173/callback");
+  params.append("redirect_uri", redirectURI);
   params.append("code_verifier", verifier!);
 
   const result = await fetch("https://accounts.spotify.com/api/token", {
