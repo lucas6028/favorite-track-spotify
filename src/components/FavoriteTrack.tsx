@@ -31,6 +31,8 @@ function FavoriteTrack() {
 
   return (
     <>
+      <h1>Favorite Track</h1>
+      <Track id={trackId} />
       {/* <h2>
           Track's name: <span id="displayName"></span>
         </h2>
@@ -52,8 +54,6 @@ function FavoriteTrack() {
             Album's Image: <span id="imgUrl"></span>
           </li>
         </ul> */}
-      <h1>Favorite Track</h1>
-      <Track id={trackId} />
     </>
   );
 }

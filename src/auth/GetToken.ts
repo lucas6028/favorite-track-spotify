@@ -1,3 +1,5 @@
+import { setCookie } from "../utils/cookies";
+
 export async function getAccessToken(clientId: string, code: string) {
   const verifier = localStorage.getItem("verifier");
   const redirectURI =
@@ -18,5 +20,6 @@ export async function getAccessToken(clientId: string, code: string) {
   });
 
   const { access_token } = await result.json();
+  setCookie("accessToken", access_token);
   return access_token;
 }
