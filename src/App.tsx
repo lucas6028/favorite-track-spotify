@@ -3,6 +3,7 @@ import "./App.css";
 import FavoriteTrack from "./components/FavoriteTrack";
 // import Hamster from "./components/hamster/Hamster";
 import Home from "./components/Home";
+import HelloWorld from "./components/test/HelloWorld";
 // import LogInButton from "./components/LogInButton";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             path="/favTrack"
             element={<FavoriteTrack></FavoriteTrack>}
           ></Route>
+          <Route path="/helloworld" element={<HelloWorld></HelloWorld>}></Route>
         </Routes>
       </Router>
     </>
