@@ -1,6 +1,6 @@
 // import FavoriteTrack from "./FavoriteTrack";
 import Hamster from "./hamster/Hamster";
-import LogInButton from "./LogInButton";
+import LogInButton from "./button/LogInButton";
 
 function Home() {
   return (
