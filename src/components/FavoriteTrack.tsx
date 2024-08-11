@@ -52,6 +52,7 @@ function FavoriteTrack() {
             Album's Image: <span id="imgUrl"></span>
           </li>
         </ul> */}
+      <h1>Favorite Track</h1>
       <Track id={trackId} />
     </>
   );
